@@ -297,12 +297,12 @@ subprojects {
         pom.project {
             name "$project.group:$project.name"
             description project.description
-            url 'https://github.com/grpc/grpc-java'
+            url 'https://github.com/canon0415/grpc1.4'
 
             scm {
-                connection 'scm:git:https://github.com/grpc/grpc-java.git'
-                developerConnection 'scm:git:git@github.com:grpc/grpc-java.git'
-                url 'https://github.com/grpc/grpc-java'
+                connection 'scm:git:https://github.com/canon0415/grpc1.4.git'
+                developerConnection 'scm:git:git@github.com:canon0415/grpc1.4.git'
+                url 'https://github.com/canon0415/grpc1.4.git'
             }
 
             licenses {
