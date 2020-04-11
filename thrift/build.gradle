@@ -1,3 +1,5 @@
+apply plugin: 'com.github.dcendents.android-maven'  
+group='com.github.canon0415'
 description = 'gRPC: Thrift'
 
 dependencies {
