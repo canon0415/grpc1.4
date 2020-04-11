@@ -1,0 +1,8 @@
+apply plugin: 'com.github.dcendents.android-maven'  
+group='com.github.canon0415'
+description = 'gRPC: Context'
+
+dependencies {
+    testCompile project(':grpc-testing')
+    signature "org.codehaus.mojo.signature:java16:+@signature"
+}
