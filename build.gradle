@@ -10,6 +10,7 @@ buildscript {
     classpath 'com.google.gradle:osdetector-gradle-plugin:1.4.0'
     classpath 'ru.vyarus:gradle-animalsniffer-plugin:1.2.0'
     classpath 'net.ltgt.gradle:gradle-errorprone-plugin:0.0.9'
+    classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
   }
 }
 
@@ -43,8 +44,8 @@ subprojects {
       }
     }
 
-    group = "io.grpc"
-    version = "1.4.1-SNAPSHOT" // CURRENT_GRPC_VERSION
+    group = "com.github.canon0415"
+    version = "1.0" // CURRENT_GRPC_VERSION
 
     sourceCompatibility = 1.6
     targetCompatibility = 1.6
