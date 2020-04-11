@@ -1,7 +1,6 @@
 rootProject.name = "grpc"
 include ":grpc-core"
 include ":grpc-context"
-include ":grpc-stub"
 include ":grpc-okhttp"
 include ":grpc-protobuf"
 include ":grpc-protobuf-lite"
@@ -10,6 +9,7 @@ include ":grpc-netty"
 include ":grpc-testing"
 include ":grpc-testing-proto"
 include ":grpc-thrift"
+include ":grpc-stub"
 
 project(':grpc-core').projectDir = "$rootDir/core" as File
 project(':grpc-context').projectDir = "$rootDir/context" as File
