@@ -290,49 +290,7 @@ subprojects {
     }
     uploadArchives.onlyIf { !name.contains("thrift") }
 
-    [
-      install.repositories.mavenInstaller,
-      uploadArchives.repositories.mavenDeployer,
-    ]*.pom*.whenConfigured { pom ->
-        pom.project {
-            name "$project.group:$project.name"
-            description project.description
-            url 'https://github.com/canon0415/grpc1.4'
-
-            scm {
-                connection 'scm:git:https://github.com/canon0415/grpc1.4.git'
-                developerConnection 'scm:git:git@github.com:canon0415/grpc1.4.git'
-                url 'https://github.com/canon0415/grpc1.4.git'
-            }
-
-            licenses {
-                license {
-                    name 'BSD 3-Clause'
-                    url 'http://opensource.org/licenses/BSD-3-Clause'
-                }
-            }
-
-            developers {
-                developer {
-                    id "grpc.io"
-                    name "gRPC Contributors"
-                    email "grpc-io@googlegroups.com"
-                    url "https://grpc.io/"
-                    // https://issues.gradle.org/browse/GRADLE-2719
-                    organization = "Google, Inc."
-                    organizationUrl "https://www.google.com"
-                }
-            }
-        }
-        if (!(project.name in
-            ["grpc-stub", "grpc-protobuf", "grpc-protobuf-lite", "grpc-protobuf-nano", "grpc-thrift"])) {
-          def core = pom.dependencies.find {dep -> dep.artifactId == 'grpc-core'}
-          if (core != null) {
-            // Depend on specific version of grpc-core because internal package is unstable
-            core.version = "[" + core.version + "]"
-          }
-        }
-    }
+   
     // At a test failure, log the stack trace to the console so that we don't
     // have to open the HTML in a browser.
     test {
